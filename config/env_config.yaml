@@ -1,0 +1,33 @@
+# env_config.yaml
+
+dt: 0.1
+max_time_step: 130
+reserved_dis: 0
+
+# Velocity and acceleration limits
+vel_lim: 16
+acc_lim:
+  min: -8
+  max: 8
+ste_lim:   # Pi / 6
+  min: -0.5236
+  max: 0.5236
+
+reward_weights:
+  R_dis: 1.0
+  R_yaw: 1.0
+  R_vel: 1.5
+  R_safe: 2.0
+  P_collision: 3.0
+  R_arrive: 2.0
+
+BEV:
+  grid_size: 40
+  resolution: 2
+
+front_back_lim: 5
+side_lim: 2.3
+
+done_dis: 4
+front_safe_dis: 4
+side_safe_dis: 1.4

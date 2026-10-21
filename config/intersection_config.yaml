@@ -1,0 +1,71 @@
+# intersection_config.yaml
+
+intersection_length: 20
+section_length: 60
+
+prohibited_zones_center:
+  - [30, 30]
+  - [110, 30]
+  - [110, 110]
+  - [30, 110]
+prohibited_zones_length:
+  - 60
+  - 60  
+  - 60
+  - 60
+prohibited_zones_width:
+  - 60
+  - 60  
+  - 60
+  - 60
+prohibited_zones_heading:
+  - 0
+  - 0
+  - 0
+  - 0
+
+# Zone rectangle corners for each direction
+prohibited_zones:
+  - [[60, 60], [60, 0], [0, 0], [0, 60]]
+  - [[140, 60], [140, 0], [80, 0], [80, 60]]
+  - [[140, 140], [140, 80], [80, 80], [80, 140]]
+  - [[60, 140], [60, 80], [0, 80], [0, 140]]
+
+origin_sections:
+  - [[80, 60], [140, 60], [140, 70], [80, 70]]
+  - [[60, 60], [60, 0], [70, 0], [70, 60]]
+  - [[0, 80], [0, 70], [60, 70], [60, 80]]
+  - [[70, 80], [80, 80], [80, 140], [70, 140]]
+  - [[61, 79], [61, 61], [79, 61], [79, 79]]    # conflict zone  scale down for pretending collision
+
+destination_sections:
+  - [[80, 80], [80, 70], [140, 70], [140, 80]]
+  - [[70, 60], [70, 0], [80, 0], [80, 60]]
+  - [[0, 70], [0, 60], [60, 60], [60, 70]]
+  - [[60, 140], [60, 80], [70, 80], [70, 140]]
+
+# origin orientations
+origin_orientations: 
+  - 3.141592653589793   # pi (for origin zone 0)
+  - 1.5707963267948966  # pi/2 (for origin zone 1)
+  - 0                  # 0 (for origin zone 2)
+  - 4.71238898038469   # 3*pi/2 (for origin zone 3)
+
+# destination orientations
+destination_orientations:
+  - 0                  # 0 (for destination zone 0)
+  - 4.71238898038469   # 3*pi/2 (for destination zone 1)
+  - 3.141592653589793   # pi (for destination zone 2)
+  - 1.5707963267948966  # pi/2 (for destination zone 3)
+
+origin_lines:
+  - [[140, 60], [140, 70]]
+  - [[60, 0], [70, 0]]
+  - [[0, 80], [0, 70]]
+  - [[80, 140], [70, 140]]
+
+destination_lines:
+  - [[140, 70], [140, 80]]
+  - [[70, 0], [80, 0]]
+  - [[0, 70], [0, 60]]
+  - [[60, 140], [70, 140]]

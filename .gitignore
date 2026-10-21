@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+log/
+runs/
+mappo_*.pt
+mappo_*.csv
+mappo_losses.png
+.venv/

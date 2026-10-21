@@ -1,0 +1,47 @@
+# veh_config.yaml
+
+# Start range for vehicle initial position
+start_range:
+  min: 1
+  max: 45
+
+# Initial velocity settings
+init_vel:
+  min: 8    # generator v2 (was 0-12): spawn at cruise-like speeds; the
+  max: 14   # braking-distance spawn gap scales with v^2 automatically
+
+# Initial steering offset
+yaw_offset:   # Pi / 6
+  min: -0.5236 
+  max: 0.5236
+
+# Vehicle dimensions
+veh_length:
+  min: 4.2
+  max: 5
+veh_width:
+  min: 1.7
+  max: 2
+# veh_length:
+#   min: 5
+#   max: 5
+# veh_width:
+#   min: 2
+#   max: 2
+
+min_vehs: 1
+max_vehs: 50
+
+IDM_config:
+  a_max: 4
+  desired_velocity: 16
+  delta: 4
+  s0: 7
+  T: 3
+  b: 1.5
+
+alive: 400   # 250 until 2026-07-21: success p90 was 219/250 steps and 62% of
+             # timeouts were queue-clipped by the clock, not stuck (run 22)
+
+sensor_precision: 8
+laser_length: 20

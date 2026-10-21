@@ -1,0 +1,7 @@
+numpy
+torch
+pyyaml
+shapely
+matplotlib
+pillow
+gym==0.26.2

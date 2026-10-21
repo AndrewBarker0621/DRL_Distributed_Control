@@ -1,0 +1,37 @@
+{
+ "tag": "NEUT",
+ "seed": 9,
+ "weights": {},
+ "planner": {
+  "soft_collision": true,
+  "col_hard_horizon": 0.2,
+  "safety_feats": true,
+  "gen_v3": true,
+  "planner_horizon": 4.0,
+  "profile_horizon": 3.0,
+  "v3_fix": true
+ },
+ "generation": "v3",
+ "protocol": {
+  "num_steps": 240000,
+  "warmup_frac": 0.25,
+  "demand_mode": "arrival",
+  "arrival_range": [
+   200.0,
+   1400.0
+  ],
+  "rl_ratio_range": [
+   1.0,
+   0.8
+  ],
+  "hero_mode": true,
+  "hero_frac": 0.5,
+  "fleet_from": [
+   "model/final_actor.pt",
+   "model/final_critic.pt"
+  ],
+  "plan_sharing": true,
+  "send_mail": false
+ },
+ "wall_s": 1461
+}
